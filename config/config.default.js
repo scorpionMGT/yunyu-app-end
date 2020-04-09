@@ -35,10 +35,10 @@ module.exports = appInfo => {
     domainWhiteList: ['http://localhost:3000', 'http://localhost:3001'], //配置白名单
   };
 
-  config.cors = {
-    origin: '*',
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-  };
+  // config.cors = {
+  //   origin: '*',
+  //   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  // };
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
