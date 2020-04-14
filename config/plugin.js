@@ -6,7 +6,7 @@
  * @Description: In User Settings Edi1
  * @FilePath: \yunyu-app-end\config\plugin.js
  */
-'use strict';
+"use strict";
 
 /** @type Egg.EggPlugin */
 module.exports = {
@@ -19,7 +19,6 @@ module.exports = {
   //   package: 'egg-cors',
   // }
 };
-
 
 // exports.cors = {
 //   enable: true,
