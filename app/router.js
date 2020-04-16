@@ -15,4 +15,12 @@ module.exports = (app) => {
     "/api/qjc/admin/hardwareResourcesPool/query",
     controller.cluster.cluster
   );
+  router.post(
+    "/api/qjc/admin/hardwareResourcesPool/delete",
+    controller.cluster.delete
+  );
+  router.post(
+    "/api/qjc/admin/user/legalize/query",
+    controller.legalize.query
+  );
 };

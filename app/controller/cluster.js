@@ -13,7 +13,6 @@ const Controller = require("egg").Controller;
 class ClusterController extends Controller {
   async cluster() {
     const { ctx } = this;
-    console.log("ctx", ctx);
     ctx.body = {
       code: 200,
       data: {
@@ -23,7 +22,7 @@ class ClusterController extends Controller {
           length: 20,
           pageCount: 1,
           pageNo: 1,
-          totalRecords: 7,
+          totalRecords: 25,
         },
         result: [
           {
@@ -49,6 +48,17 @@ class ClusterController extends Controller {
       serverTime: Date.now(),
       version: "1.0.0",
     };
+  }
+  async delete() {
+    const { ctx } = this;
+    ctx.body = {
+      code: 200,
+      data: '',
+      message: '删除成功',
+      result: true,
+      serverTime: Date.now(),
+      version: "1.0.0",
+    }
   }
 }
 
