@@ -20,7 +20,31 @@ module.exports = (app) => {
     controller.cluster.delete
   );
   router.post(
-    "/api/qjc/admin/user/legalize/query",
+    "/api/qjc/admin/user/findUserCertificationInfo",
     controller.legalize.query
+  );
+  router.post(
+    "/api/qjc/admin/user/checkUserCertificationInfo",
+    controller.legalize.approved
+  );
+  router.post(
+    "/api/qjc/admin/user/checkUserCertificationInfo",
+    controller.legalize.reject
+  );
+  router.post(
+    "/api/qjc/admin/virtual/machine/Record/createRecord",
+    controller.machine.detail
+  );
+  router.post(
+    "/api/qjc/admin/virtual/Record/findById",
+    controller.machine.detailLog
+  );
+  router.post(
+    "/api/qjc/admin/user/list",
+    controller.user.list
+  );
+  router.post(
+    "/api/qjc/admin/user/list/setAccountProps",
+    controller.user.setAccountProps
   );
 };
