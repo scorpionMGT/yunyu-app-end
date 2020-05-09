@@ -27,11 +27,12 @@ class UserController extends Controller {
           },
           result: [
             {
-                id: 2,
-                accountName: 'string',
-                permission: 'string',
-                account: 10,
-                limit: params.page.pageNo,
+              id: 1,
+              userName: 'string',
+              permission: 'string',
+              givingAmount: 2,
+              balance: 3.6,
+              accountType: 2
             },
           ],
         },
