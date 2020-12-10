@@ -5,6 +5,7 @@
  */
 module.exports = (app) => {
   const { router, controller } = app;
+  router.get("/", controller.home.helloWorld);
   router.get("/api/getUserInfo", controller.home.index);
   router.post(
     "/api/qjc/resource_center/material/findMaterials",

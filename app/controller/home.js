@@ -18,6 +18,11 @@ class HomeController extends Controller {
       userId: 123456,
     };
   }
+
+  async helloWorld () {
+    const { ctx } = this;
+    ctx.body = 'hello world'
+  }
 }
 
 module.exports = HomeController;
