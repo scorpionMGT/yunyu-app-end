@@ -14,7 +14,7 @@ class HomeController extends Controller {
   async index() {
     const { ctx } = this;
     ctx.body = {
-      username: "maoguotao",
+      username: "maoguotao test",
       userId: 123456,
     };
   }
