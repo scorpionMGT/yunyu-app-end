@@ -39,12 +39,11 @@ module.exports = (appInfo) => {
   config.jwt = {
     secret: 'yunyu',	//自定义token的加密条件字符串，可按各自的需求填写
   };
-
-
-  // config.cors = {
-  //   origin: '*',
-  //   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
-  // };
+  
+  config.cors = {
+    origin: '*',
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+  };
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',

@@ -14,9 +14,9 @@ class LoginController extends Controller {
     ctx.body = {
         code: 200,
         data: {
-          username: params.username,
-          status: 1,
-          vipLevel: 1,
+          // username: params.username,
+          // status: 1,
+          // vipLevel: 1,
           token: token
         },
         message: true,

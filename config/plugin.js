@@ -14,10 +14,11 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
-  // cors: {
-  //   enable: true,
-  //   package: 'egg-cors',
-  // }
+  cors: {
+    enable: true,
+    package: 'egg-cors',
+  },
+    // 跨域配置
   jwt: {
     enable: true,
     package: 'egg-jwt',
