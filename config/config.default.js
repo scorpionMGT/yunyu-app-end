@@ -35,6 +35,12 @@ module.exports = (appInfo) => {
     domainWhiteList: ["http://localhost:3000", "http://localhost:3001"], //配置白名单
   };
 
+
+  config.jwt = {
+    secret: 'yunyu',	//自定义token的加密条件字符串，可按各自的需求填写
+  };
+
+
   // config.cors = {
   //   origin: '*',
   //   allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
