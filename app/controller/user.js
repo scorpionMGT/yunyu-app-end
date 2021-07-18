@@ -11,7 +11,7 @@
 const Controller = require("egg").Controller;
 
 class UserController extends Controller {
-  async list() {
+  async index() {
     const { ctx } = this;
     let params = ctx.request.body
     ctx.body = {
