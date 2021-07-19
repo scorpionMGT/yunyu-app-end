@@ -13,9 +13,7 @@ class LoginController extends Controller {
     }, app.config.jwt.secret, {
       expiresIn: "1 days",
     })
-    console.log('username, password', username, password)
     const flag = username === 'maoguotao' && password === 'Mao!123456'
-    console.log('flag',  username === 'maoguotao', password === 'Mao!123456', flag)
     const code = flag ? 200 : 201
     const data = flag ?  { token: token } : null
     const message = flag ? true : '用户名或者密码错误'
