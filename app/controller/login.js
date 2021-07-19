@@ -1,29 +1,31 @@
 "use strict";
 
 const Controller = require("egg").Controller;
-
+const crypto = require('../../utils/crypto')
 class LoginController extends Controller {
   async index() {
     const { ctx, app } = this;
-    const params = ctx.request.body
+    const params = ctx.request.body;
+    let username = crypto.DecryptFunc(params.username)
+    let password = crypto.DecryptFunc(params.password)
     const token = app.jwt.sign({
-      username: params.username,
+      username
     }, app.config.jwt.secret, {
       expiresIn: "1 days",
     })
+    console.log('username, password', username, password)
+    const flag = username === 'maoguotao' && password === 'Mao!123456'
+    console.log('flag',  username === 'maoguotao', password === 'Mao!123456', flag)
+    const code = flag ? 200 : 201
+    const data = flag ?  { token: token } : null
+    const message = flag ? true : '用户名或者密码错误'
     ctx.body = {
-        code: 200,
-        data: {
-          // username: params.username,
-          // status: 1,
-          // vipLevel: 1,
-          token: token
-        },
-        message: true,
-        result: true,
+        code,
+        data,
+        message,
         serverTime: Date.now(),
         version: "1.0.0",
-    };
+      };
   }
 }
 
