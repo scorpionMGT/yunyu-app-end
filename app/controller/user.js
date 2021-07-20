@@ -13,28 +13,15 @@ const Controller = require("egg").Controller;
 class UserController extends Controller {
   async index() {
     const { ctx } = this;
-    let params = ctx.request.body
     ctx.body = {
         code: 200,
         data: {
-          page: {
-            begin: 0,
-            end: 20,
-            length: 20,
-            pageCount: 1,
-            pageNo: params.page.pageNo,
-            totalRecords: 25,
-          },
-          result: [
-            {
-              id: 1,
-              userName: 'string',
-              permission: 'string',
-              givingAmount: 2,
-              balance: 3.6,
-              accountType: 2
-            },
-          ],
+          list: [
+            { 
+              name: 'maoguotao',
+              mobile: '18716020616'
+            }
+          ]
         },
         message: true,
         result: true,
