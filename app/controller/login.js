@@ -5,6 +5,7 @@ const crypto = require('../../utils/crypto')
 class LoginController extends Controller {
   async index() {
     const { ctx, app } = this;
+    console.log('app.config.env', app.config.env)
     const params = ctx.request.body;
     let username = crypto.DecryptFunc(params.username)
     let password = crypto.DecryptFunc(params.password)
