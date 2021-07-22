@@ -10,7 +10,17 @@ class UserService extends Service {
     return result
   }
 
-  async read(username) {
+  async read (username) {
+    const user = await this.app.mysql.get('users', { username: username });
+    return user
+  }
+
+  async update (username) {
+    const user = await this.app.mysql.get('users', { username: username });
+    return user
+  }
+
+  async delete (username) {
     const user = await this.app.mysql.get('users', { username: username });
     return user
   }
