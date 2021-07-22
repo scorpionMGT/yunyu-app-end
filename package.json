@@ -27,7 +27,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "dev": "EGG_SERVER_ENV=test egg-bin dev",
+    "dev": "egg-bin dev EGG_SERVER_ENV=test",
     "start": "egg-scripts start --daemon --title=egg-server-Y",
     "stop": "egg-scripts stop --title=egg-server-Y",
     "debug": "egg-bin debug",

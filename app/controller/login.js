@@ -8,14 +8,13 @@ class LoginController extends Controller {
     const params = ctx.request.body
     const username = crypto.DecryptFunc(params.username)
     const password = crypto.DecryptFunc(params.password)
-    const userInfo = await ctx.service.user.find(username)
-    console.log('userInfo', userInfo);
+    const userInfo = await ctx.service.user.read(username)
     const token = app.jwt.sign({
       username
     }, app.config.jwt.secret, {
       expiresIn: "1 days",
     })
-    const flag = username === userInfo.username && password === userInfo.password
+    const flag = userInfo && username === userInfo.username && password === userInfo.password
     const code = flag ? 200 : 201
     const data = flag ?  { token: token } : null
     const message = flag ? true : '用户名或者密码错误'
