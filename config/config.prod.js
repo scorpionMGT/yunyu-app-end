@@ -1,4 +1,5 @@
 // config/config.production.js
+'use strict';
 exports.mysql = {
   // database configuration
   client: {

@@ -1,4 +1,5 @@
 // config/config.test.js
+'use strict';
 exports.mysql = {
   // database configuration
   client: {

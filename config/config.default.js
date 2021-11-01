@@ -8,12 +8,12 @@
  */
 /* eslint valid-jsdoc: "off" */
 
-"use strict";
+'use strict';
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
-module.exports = (appInfo) => {
+module.exports = appInfo => {
   /**
    * built-in config
    * @type {Egg.EggAppConfig}
@@ -21,7 +21,7 @@ module.exports = (appInfo) => {
   const config = (exports = {});
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + "_1576468800558_4720";
+  config.keys = appInfo.name + '_1576468800558_4720';
 
   // add your middleware config here
   config.middleware = [];
@@ -32,17 +32,17 @@ module.exports = (appInfo) => {
       enable: false, // 前后端分离，post请求不方便携带_csrf
       ignoreJSON: true,
     },
-    domainWhiteList: ["http://localhost:3000", "http://localhost:3001"], //配置白名单
+    domainWhiteList: [ 'http://localhost:3000', 'http://localhost:3001' ], // 配置白名单
   };
 
 
   config.jwt = {
-    secret: 'yunyu',	//自定义token的加密条件字符串，可按各自的需求填写
+    secret: 'yunyu',	// 自定义token的加密条件字符串，可按各自的需求填写
   };
-  
+
   config.cors = {
     origin: '*',
-    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH'
+    allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
   };
   // add your user config here
   const userConfig = {

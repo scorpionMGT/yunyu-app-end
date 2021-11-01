@@ -6,7 +6,7 @@
  * @Description: In User Settings Edi1
  * @FilePath: \yunyu-app-end\config\plugin.js
  */
-"use strict";
+'use strict';
 
 /** @type Egg.EggPlugin */
 module.exports = {
@@ -18,7 +18,7 @@ module.exports = {
     enable: true,
     package: 'egg-cors',
   },
-    // 跨域配置
+  // 跨域配置
   jwt: {
     enable: true,
     package: 'egg-jwt',
@@ -26,7 +26,7 @@ module.exports = {
   mysql: {
     enable: true,
     package: 'egg-mysql',
-  }
+  },
 };
 
 // exports.cors = {
