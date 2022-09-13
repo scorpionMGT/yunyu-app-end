@@ -1,7 +1,9 @@
 'use strict';
 
 const Controller = require('egg').Controller;
+const { maoguotao, getDate } = require('mgtutils');
 const crypto = require('../../utils/crypto');
+console.log('maoguotao', maoguotao)
 class LoginController extends Controller {
   async index() {
     const { ctx, app } = this;
